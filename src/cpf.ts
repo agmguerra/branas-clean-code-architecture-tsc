@@ -8,7 +8,6 @@ const isTodosDigitosIguais = (cpf: String): boolean => cpf.split("").every(digit
 const isTamanhoInvalido = (cpf: String): boolean => (cpf.length < 11 || cpf.length > 14) ? true : false
 
 const calcularDigitoVerificador = (cpfParte: String): number => {
-
     let acumulador: number = 0
     let multiplicador = cpfParte.length + 1
     for (let ind = 0; ind < cpfParte.length ; ind++) {
@@ -18,7 +17,6 @@ const calcularDigitoVerificador = (cpfParte: String): number => {
     };
     let resto = acumulador % 11
     return (resto < 2) ? 0 : (11 - resto);
-
 }
 
 const isCpfValido = (cpf: String): boolean => {
